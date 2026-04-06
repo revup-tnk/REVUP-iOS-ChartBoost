@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "WithChartBoost",
+    name: "REVUPWithChartBoost",
     products: [
         .library(
-            name: "WithChartBoost",
-            targets: ["WithChartBoost"]),
+            name: "REVUPWithChartBoost",
+            targets: ["REVUPWithChartBoost"]),
     ],
     targets: [
         .binaryTarget(
-            name: "WithChartBoost",
+            name: "REVUPWithChartBoost",
             url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/ChartboostSDK.xcframework.zip",
             checksum: "21ab73dc8f95f325bc31b63e66a64c1d719ae306d8c4c50e08d494200f86dfdd"
         ),
