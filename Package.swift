@@ -8,13 +8,34 @@ let package = Package(
     products: [
         .library(
             name: "REVUPWithChartBoost",
-            targets: ["REVUPWithChartBoost"]),
+            targets: ["REVUPWithChartBoostTargets"]),
     ],
     targets: [
+        .target(
+            name: "REVUPWithChartBoostTargets",
+            dependencies: [
+                .target(name: "REVUPWithChartBoost")
+            ],
+            linkerSettings: [
+                .linkedFramework("AdSupport"),
+                .linkedFramework("AppTrackingTransparency"),
+                .linkedFramework("AVFoundation"),
+                .linkedFramework("CoreFoundation"),
+                .linkedFramework("CoreGraphics"),
+                .linkedFramework("CoreMedia"),
+                .linkedFramework("CoreTelephony"),
+                .linkedFramework("Foundation"),
+                .linkedFramework("SafariServices"),
+                .linkedFramework("StoreKit"),
+                .linkedFramework("SystemConfiguration"),
+                .linkedFramework("UIKit"),
+                .linkedFramework("WebKit"),
+            ]
+        ),
         .binaryTarget(
             name: "REVUPWithChartBoost",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/ChartboostSDK.xcframework.zip",
-            checksum: "21ab73dc8f95f325bc31b63e66a64c1d719ae306d8c4c50e08d494200f86dfdd"
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.1.0/ChartboostSDK.xcframework.zip",
+            checksum: "2c4e76dbfba4037119e368b0074880d18dba76c673f0c7e175e5b3d221ae3b6e"
         ),
     ]
 )
